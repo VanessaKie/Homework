@@ -10,15 +10,25 @@ function App(){
       lastname: 'Hamster'
   };
   
-  const greeting = 
-      < h1 >
-      Hello, {buildGreeting(animal)}! 
-      </h1>
-  
   function buildGreeting(animal) {
     return animal.firstname + ' ' + animal.lastname;
 }
-return(greeting);
+  function clock(){
+  const greeting = (
+    <div>
+      < h1 >
+      Hello, {buildGreeting(animal)}! 
+      </h1>
+      <h2> It is {new Date().toLocaleTimeString()}.</h2>
+      </div>
+  )  
+  return (greeting);
+  }
+  setInterval(clock, 1000);
+
+
+return(setInterval);
+
 }
 /*
 class App extends Component{
