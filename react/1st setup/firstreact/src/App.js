@@ -1,35 +1,28 @@
 import React, {Component} from 'react';
 //import logo from './logo.svg';
 import './App.css';
+import { render } from 'react-dom';
 
 
-function App(){
+
   
-  const animal = {
-      firstname: 'Mister',
-      lastname: 'Hamster'
-  };
+    function Welcome (props) {
+      console.log(props);
+      return <h1>Hello, {props.name} or the obj. as a string {JSON.stringify(props)}!</h1>
+    }
   
-  function buildGreeting(animal) {
-    return animal.firstname + ' ' + animal.lastname;
-}
-  function clock(){
-  const greeting = (
-    <div>
-      < h1 >
-      Hello, {buildGreeting(animal)}! 
-      </h1>
-      <h2> It is {new Date().toLocaleTimeString()}.</h2>
-      </div>
-  )  
-  return (greeting);
+    function Name(){
+      return(
+          <div>
+               <Welcome name="Nessa" />
+               <Welcome name="Christiane" />
+               <Welcome name="Silke" />
+          </div>
+      );
   }
-  setInterval(clock, 1000);
+  
+  
 
-
-return(setInterval);
-
-}
 /*
 class App extends Component{
   constructor(props){
@@ -54,4 +47,4 @@ class Lander extends Component{
   }
 }
 */
-export default App;
+export default Name;
