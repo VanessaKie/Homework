@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './button';
+import Block from './block';
 
 class Content extends React.Component{
     constructor(props){
@@ -16,13 +17,7 @@ class Content extends React.Component{
         }
     render(){
         return(
-            <div className="App-content">
-            Content
-            <br />
-            Counter: {this.state.counter}
-            <br />
-            <Button click={this.handleClick} name='counter' />
-        </div>
+            <Block name='content' cname='App-content' counter={this.state.counter} method={this.handleClick} />
         );
     }
 }

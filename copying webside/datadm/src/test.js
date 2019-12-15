@@ -1,7 +1,6 @@
 import React from 'react';
-import Block from './block';
 
-class Sidebar extends React.Component{
+class Test extends React.Component{
     constructor(props){
         super(props);
         this.state ={
@@ -16,9 +15,9 @@ class Sidebar extends React.Component{
         }
     render(){
         return(
-            <Block name='sidebar' cname='App-sidebar' counter={this.state.counter} method={this.handleClick} />
+            {this.state.conter}
         );
     }
 }
 
-export default Sidebar; 
+export default Test; 
