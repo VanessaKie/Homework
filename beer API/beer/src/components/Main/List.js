@@ -2,6 +2,7 @@ import React from 'react';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
+import ToggleButton from 'react-bootstrap/ToggleButton';
 
 function List(props){
     const beers = props.api
@@ -27,8 +28,7 @@ function List(props){
                     <Card.Text>
                     {description}
                     </Card.Text>
-                    <Card.Link href="#">Card Link</Card.Link>
-                    <Card.Link href="#">Another Link</Card.Link>
+                    <input type="checkbox" checked data-toggle="toggle" />
                 </Card.Body>
             </Card>
         );

@@ -23,12 +23,24 @@ class Header extends React.Component {
       return (
         <header className="App-header">
         <Example />
-        <Form inline>
+        <input
+            type="text"
+            onChange={this.handleSearch}
+            placeholder="Search..."
+            value={this.state.searchInput}
+          />
+          <button onClick={() => this.props.handleButtonSearch(this.state.searchInput)}>
+            Click
+          </button>
+          <button onClick={ () => this.handleButtonAll()}>
+            all
+          </button>
+       {/*  <Form inline>
           <FormControl type="text" placeholder="Search" className=" mr-sm-2" onChange={this.handleSearch} value={this.state.searchInput}/>
           <Button type="submit" onClick={() => this.props.handleButtonSearch(this.state.searchInput)}>Search</Button>
-          {console.log('search:', typeof(this.state.searchInput))}
-          <Button type="submit" onClick={this.handleButtonAll}>All</Button>
-        </Form>
+          {console.log('search:', this.state.searchInput)}
+          <Button type="submit" onClick={this.props.handleButtonAll}>All</Button>
+        </Form> */}
         </header>
       );
     }

@@ -18,11 +18,11 @@ class App extends React.Component {
     this.state = {
       beers: false,
     };
-    this.handleButtonAll = this.handleButtonAll.bind(this)
+   /*  this.handleButtonAll = this.handleButtonAll.bind(this) */
   }
 
   handleButtonAll() {
-    alert(22);
+    
     fetch('https://api.punkapi.com/v2/beers')
       .then (response => response.json())
       .then (resp => {
@@ -84,7 +84,7 @@ class App extends React.Component {
         </Switch>
        </Router>
        <Footer />
-       {console.log('app',this.state.beers)}
+       {console.log('app this.state api',this.state.beers)}
       </div>
     );
   }
