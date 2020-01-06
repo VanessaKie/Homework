@@ -4,7 +4,7 @@ import './index.css';
 import Pagination from "react-pagination-js";
 import "react-pagination-js/dist/styles.css";
 
-import List from './List';
+import ListContainer from './List';
 
 
 
@@ -14,7 +14,6 @@ class Main extends React.Component {
         this.state={
         currentPage: 1
         }
-        this.beers=this.props.api
     }
 
     changeCurrentPage = numPage => {
@@ -24,7 +23,6 @@ class Main extends React.Component {
         return(
         <div>
         
-            <List api={this.beers} />
             {console.log('main', this.beers)}
             <Pagination
             currentPage={this.state.currentPage}

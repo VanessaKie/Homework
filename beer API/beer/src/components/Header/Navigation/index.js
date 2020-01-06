@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 
 
-class Example extends React.Component {
+class Navigation extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -45,10 +45,11 @@ class Example extends React.Component {
         
         <Menu right isOpen={this.state.menuOpen}
         onStateChange={(state) => this.handleStateChange(state)}>
-          <Link to="/home" onClick={() => this.closeMenu()}>Home</Link>
+          <Link to="/Beers" onClick={() => this.closeMenu()}>Beers</Link>
+          <Link to="/My Favourites" onClick={() => this.closeMenu()}>My Favourites</Link>
         </Menu>
       );
     }
   }
 
-  export default Example;
+  export default Navigation;

@@ -1,8 +1,7 @@
 import React from 'react';
 import './index.css';
-import Example from './Navigation'
+import Navigation from './Navigation'
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import FormControl from 'react-bootstrap/FormControl';
 
 class Header extends React.Component {
@@ -18,29 +17,27 @@ class Header extends React.Component {
         searchInput: e.target.value
       });
     };
+
+    onKeyPress = (event) => {
+      if (event.key === "Enter") {
+        //alert(22);
+        this.props.handleButtonSearch(this.state.searchInput)
+      }}
   
     render() {
       return (
         <header className="App-header">
-        <Example />
-        <input
-            type="text"
-            onChange={this.handleSearch}
-            placeholder="Search..."
-            value={this.state.searchInput}
-          />
-          <button onClick={() => this.props.handleButtonSearch(this.state.searchInput)}>
-            Click
+        <Navigation />
+        <Form inline>
+          <FormControl type="text" placeholder="Search" className=" mr-sm-2" onChange={this.handleSearch} onKeyPress={this.onKeyPres} value={this.state.searchInput} />
+        </Form> 
+          <button className="btn search" onClick={() => this.props.handleButtonSearch(this.state.searchInput)}>
+            Search
           </button>
-          <button onClick={ () => this.handleButtonAll()}>
+          <button className="btn all" onClick={this.props.handleButtonAll}>
             all
-          </button>
-       {/*  <Form inline>
-          <FormControl type="text" placeholder="Search" className=" mr-sm-2" onChange={this.handleSearch} value={this.state.searchInput}/>
-          <Button type="submit" onClick={() => this.props.handleButtonSearch(this.state.searchInput)}>Search</Button>
-          {console.log('search:', this.state.searchInput)}
-          <Button type="submit" onClick={this.props.handleButtonAll}>All</Button>
-        </Form> */}
+          </button> 
+         
         </header>
       );
     }

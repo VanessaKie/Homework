@@ -66,6 +66,9 @@
     border: none !important;
   }
   
+  .bm-item a{
+    border: none !important;
+  }
   /* Styling of overlay */
   .bm-overlay {
     background: rgba(0, 0, 0, 0) !important;

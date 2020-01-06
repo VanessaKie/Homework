@@ -21,17 +21,22 @@
     position: fixed;
     z-index: 100;
     width: 100vw;
+    top: 0px;
   }
 
-  .btn-primary {
-    color: black !important; 
-    background-color: #CC9969 !important;
-    border: none !important;
-    padding: 3px 5px !important;
-    margin-right: 3vw !important;
+.btn {
+  color: black !important; 
+  background-color: #CC9969 !important;
+  border: none !important;
+  padding: 3px 5px !important;
+  margin-right: 2vw !important;
+ 
+}
+.search {
+   margin-left: 2vw !important;
 }
 
-.btn-primary:hover {
+.btn:hover {
   background: #DF923F !important;
   color: black !important;
   border: none !important;
@@ -42,20 +47,3 @@
   border: none !important;
   height: 32px !important;
 }
-
- /*  .search {
-    margin-left: 14px !important; 
-    margin-right: 30px !important;
-    background: #CC9969 !important;
-    color: black !important;
-    border: none !important;
-    border-radius: 3px !important;
-    width: 50px !important;
-    height: 25px !important;
-  }
-
-  .search button:hover{
-    background: #DF923F;
-    color: black;
-
-  } */
